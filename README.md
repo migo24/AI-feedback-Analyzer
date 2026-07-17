@@ -20,7 +20,7 @@ A full-stack Next.js 15 application that analyzes customer feedback using a trai
 
 ## Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Next.js 15 App                           │
 ├─────────────────────────────────────────────────────────────────┤
@@ -80,7 +80,7 @@ A full-stack Next.js 15 application that analyzes customer feedback using a trai
 
 ## Data Flow: Analyze Feedback
 
-```
+```text
 User submits feedback (POST /api/analyze-feedback)
         │
         ▼
@@ -109,7 +109,7 @@ User submits feedback (POST /api/analyze-feedback)
 
 ## Project Structure
 
-```
+```text
 AIFEEDBACK/
 ├── app/
 │   ├── api/                    # Next.js API routes
@@ -162,5 +162,4 @@ GEMINI_API_KEY=your-gemini-key  # Optional (fallback works without)
 - Add export (CSV/PDF) for dashboard
 - WebSocket for real-time updates
 - Unit/integration tests
-- Dockerize Python ML service for production scaling#   A I - f e e d b a c k - A n a l y z e r  
- 
+- Dockerize Python ML service for production scaling

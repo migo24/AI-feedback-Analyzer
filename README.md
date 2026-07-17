@@ -28,28 +28,28 @@ A full-stack Next.js 15 application that analyzes customer feedback using a trai
 │  ├── / (Landing)                                                │
 │  ├── /feedback (Submit & Analyze)                               │
 │  ├── /dashboard (Analytics: charts, trends, topics)             │
-│  ├── /login, /signup, /profile (Auth)                          │
+│  ├── /login, /signup, /profile (Auth)                           │ 
 │                                                                 │
 │  Components                                                     │
-│  ├── Navbar, Footer, FeedbackWidget, NotificationSystem        │
-│  └── SessionWrapper (NextAuth context)                         │
+│  ├── Navbar, Footer, FeedbackWidget, NotificationSystem         │
+│  └── SessionWrapper (NextAuth context)                          │
 ├─────────────────────────────────────────────────────────────────┤
 │  API Routes                                                     │
-│  ├── POST /api/analyze-feedback  → Python ML + Gemini          │
-│  ├── GET  /api/sentiment-stats   → Aggregated sentiment data   │
-│  ├── GET  /api/trends            → Time-series sentiment       │
-│  ├── GET  /api/topics            → Extracted keywords/topics   │
-│  ├── GET  /api/recent-feedback   → Latest submissions          │
-│  └── /api/auth/[...nextauth]     → NextAuth credentials        │
+│  ├── POST /api/analyze-feedback  → Python ML + Gemini           │
+│  ├── GET  /api/sentiment-stats   → Aggregated sentiment data    │
+│  ├── GET  /api/trends            → Time-series sentiment        │
+│  ├── GET  /api/topics            → Extracted keywords/topics    │
+│  ├── GET  /api/recent-feedback   → Latest submissions           │
+│  └── /api/auth/[...nextauth]     → NextAuth credentials         │
 ├─────────────────────────────────────────────────────────────────┤
-│  Python ML Service (spawned via child_process)                 │
-│  ├── app/model/prediction.py   → Loads .pkl model + vectorizer │
-│  ├── app/model/main.py         → Training pipeline             │
-│  └── Models: best_sentiment_model.pkl, tfidf_vectorizer.pkl   │
+│  Python ML Service (spawned via child_process)                  │
+│  ├── app/model/prediction.py   → Loads .pkl model + vectorizer  │
+│  ├── app/model/main.py         → Training pipeline              │
+│  └── Models: best_sentiment_model.pkl, tfidf_vectorizer.pkl     │
 ├─────────────────────────────────────────────────────────────────┤
 │  Database (MongoDB)                                             │
-│  ├── User: email, password (bcrypt)                            │
-│  └── Response: feedback, sentiment, confidence, topics, etc.   │
+│  ├── User: email, password (bcrypt)                             │
+│  └── Response: feedback, sentiment, confidence, topics, etc.    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
